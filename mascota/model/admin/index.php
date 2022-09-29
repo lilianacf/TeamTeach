@@ -20,6 +20,10 @@ $usua = mysqli_fetch_assoc($usuarios);
     
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
         <input type="submit" formaction="../index.php" value="Regresar" />
+    
+
+        
+        
     </tr>
 </form>
 
@@ -61,89 +65,83 @@ if(isset($_POST['btncerrar']))
             <ul class="menu wrapper" >
     
                 <li class="first-item">
-                    <a href="#">
-                        <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 1</span>
+                    <a href="agregar-usu.php">
+                        <img src="img/agregar.png" alt="" class="imagen">
+                        <span class="text-item">Agregar tipo usuario</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="img/ejecucion.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 2</span>
+                    <a href="usuario.php">
+                        <img src="img/user.png" alt="" class="imagen">
+                        <span class="text-item">Agregar Usuarios</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="img/implementar.jpg" alt="" class="imagen">
-                        <span class="text-item">OPCION 3</span>
+                    <a href="mascota.php">
+                        <img src="img/pet.png" alt="" class="imagen">
+                        <span class="text-item">Agregar Mascota</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="img/planear.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 4</span>
+                    <a href="medicamentos.php">
+                        <img src="img/med.png" alt="" class="imagen">
+                        <span class="text-item">Agregar Medicamentos</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 5</span>
+                    <a href="hist_clinica.php">
+                        <img src="img/his.png" alt="" class="imagen">
+                        <span class="text-item">Agregar Historia Clínica</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li class="first-item">
-                    <a href="#">
-                        <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 6</span>
+                    <a href="cons_tipusu.php">
+                        <img src="img/conusu.png" alt="" class="imagen">
+                        <span class="text-item">Consultar tipos de usuario</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 7</span>
+                    <a href="lista_usuarios.php">
+                        <img src="img/conmas.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Usuarios</span>
+                        <span class="down-item"></span>
+                    </a>
+                </li>
+    
+                
+    
+                <li>
+                    <a href="list_mascota.php">
+                        <img src="img/list.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Mascotas</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 8</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 9</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 10</span>
+                    <a href="cons_medicamentos.php">
+                        <img src="img/conmed.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Medicamentos</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 11</span>
+                    <a href="cons_hclinica.php">
+                        <img src="img/conhist.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Historia Clinica</span>
                         <span class="down-item"></span>
                     </a>
                 </li>

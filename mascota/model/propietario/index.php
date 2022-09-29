@@ -16,6 +16,7 @@ $usua = mysqli_fetch_assoc($usuarios);
     </tr>
 <tr><br>
     <td colspan='2' align="center">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
@@ -62,91 +63,23 @@ if(isset($_POST['btncerrar']))
     
                 <li class="first-item">
                     <a href="#">
-                        <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 1</span>
+                        <img src="img/list.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Mascotas</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
     
                 <li>
                     <a href="#">
-                        <img src="img/ejecucion.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 2</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="img/implementar.jpg" alt="" class="imagen">
-                        <span class="text-item">OPCION 3</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="img/planear.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 4</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 5</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li class="first-item">
-                    <a href="#">
-                        <img src="img/analisis.png" alt="" class="imagen">
-                        <span class="text-item">OPCION 6</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 7</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 8</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 9</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-    
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 10</span>
+                        <img src="img/conhist.png" alt="" class="imagen">
+                        <span class="text-item">Consultar Historia Clínica</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <img src="" alt="" class="imagen">
-                        <span class="text-item">OPCION 11</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
+            
+    
+                
                 
             </ul>
             
