@@ -58,7 +58,7 @@ else{
     $query_tusu=mysqli_query($mysqli, $sql_tusu);
     $fila=mysqli_fetch_assoc($query_tusu);
     //consulta tipo mascota
-    $sql_est= "SELECT * from tipo_mascotas WHERE ID_MASC > 2 ";
+    $sql_est= "SELECT * from tipo_mascotas WHERE ID_MASC > 0 ";
     $query_est=mysqli_query($mysqli, $sql_est);
     $fila_est=mysqli_fetch_assoc($query_est);
 ?>
