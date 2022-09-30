@@ -18,7 +18,7 @@ $usua = mysqli_fetch_assoc($usuarios);
 
             <input type="submit" value="Cerrar sesión" name="btncerrar" />
         </td>
-        <input type="submit" formaction="../index.php" value="Regresar" />
+        <input type="submit" formaction="../admin/index.php" value="Regresar" />
     </tr>
 </form>
 

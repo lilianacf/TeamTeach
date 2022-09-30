@@ -20,7 +20,7 @@ $usua = mysqli_fetch_assoc($usuarios);
     
   
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
-        <input type="submit" formaction="../index.php" value="Regresar" />
+        <input type="submit" formaction="../funcionario/index.php" value="Regresar" />
     </tr>
 </form>
 
@@ -29,8 +29,8 @@ $usua = mysqli_fetch_assoc($usuarios);
 if(isset($_POST['btncerrar']))
 {
 	session_destroy();
- 
-    header('location: ../propietario/index.html');
+    header('location: ../../index.html');
+    
 }
 	
 ?>
@@ -67,17 +67,16 @@ if(isset($_POST['btncerrar']))
                 </li>
     
                 <li>
-                    <a href="detallevisita.php">
+                    <a href="lista_visitas.php">
                         <img src="img/med.png" alt="" class="imagen">
                         <span class="text-item">Detalle de visita</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-    
                 
-                
+               
             </ul>
-            
+          
         </nav>
     </body>
 </html>

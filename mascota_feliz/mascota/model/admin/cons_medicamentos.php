@@ -8,44 +8,6 @@ $usuarios = mysqli_query($mysqli, $sql);
 $usua = mysqli_fetch_assoc($usuarios);
 
 ?>
-
-<?php
-if ((isset($_POST["guardar"]))&&($_POST["guardar"]=="frm_cons"))
-{
-    $id_med=$_POST["id_med"];
-    $desc_med = $_POST["desc_med"];
-    //CONSULTA QUE VALIDA QUE EL MEDICAMENTO NO SE ENCUENTRE REGISTRADA
-    $sql_val= " SELECT * FROM MEDICAMENTOS WHERE id_med='$id_med' AND desc_med='$desc_med'";
-    $tip=mysqli_query($mysqli,$sql_val);
-    $row= mysqli_fetch_assoc($tip);
-   
-    if ($row){
-        echo'<script>alert ("El Código del medicamento se encuentra registrado");</script>';
-        echo'<script>window.location="medicamentos.php"</script>';
-    }
-
-    elseif ($_POST["id_med"]=="" || $_POST["desc_med"]== "")
-    {
-        echo '<script>alert ("Existen campos vacios");</script>';
-        echo '<script>window.location="medicamentos.php"</script>';
-    }
-    
-
-else{
-    $id_med= $_POST["id_med"];
-    $desc_med = $_POST["desc_med"];
-    $sql_mas="INSERT INTO medicamentos(id_med,desc_med) 
-    values ('$id_med','$desc_med')";
-    $tip = mysqli_query($mysqli, $sql_mas);    
-    echo'<script>alert ("Registro ingresado exitosamente");</script>';
-    echo'<script>window.location="medicamentos.php"</script>';
-
-    }
-
-}
-
-?>
-
 <form method="POST">
 
     <tr>
@@ -65,8 +27,7 @@ else{
 if(isset($_POST['btncerrar']))
 {
 	session_destroy();
-
-   
+  
     header('location: ../../index.html');
 }
 	
@@ -103,10 +64,7 @@ if(isset($_POST['btncerrar']))
                     <td>
                         Descripción Medicamentos
                     </td>
-                    <td>
-                        Acción
-                    </td>
-                  
+                                     
                     <?php
                         $sql= "SELECT * FROM medicamentos ";
                         $i=0;
@@ -118,7 +76,6 @@ if(isset($_POST['btncerrar']))
                     <td><?php echo $i ?></td> 
                     <td style="text-transform: uppercase;"><?php echo $result['id_med']?></td> 
                     <td style="text-transform: uppercase;"><?php echo $result['desc_med']?></td>
-                    <td><a href="?id=<?php echo $result['id_med'] ?>" onclick="window.open('update_med.php?id=<?php echo $result['id_med'] ?>','','width= 600,height=500, toolbar=NO');void(null);">Update/Delete</a></td>    
                 </tr>  
                     <?php
                     }

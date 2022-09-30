@@ -121,12 +121,12 @@ if(isset($_POST['btncerrar']))
               </tr>
               <tr>
                   <th>Fecha de la visita</th>
-                  <th><input type="date" name="fecha_visita" placeholder="Seleccione la fecha"></th>
+                  <th><input type="datetime-local" name="fecha_visita" placeholder="Seleccione la fecha"></th>
               </tr>
               <tr>
                 <th> Propietario</th>
                 <th>
-                <select name ="id_usuario"> 
+                <select id="owerList" name ="id_usuario"> 
                       <option value="">Seleccione el propietario</option>
                        <?php
                         //Codigo php ciclo
@@ -140,15 +140,8 @@ if(isset($_POST['btncerrar']))
             </tr>
             <th> Mascota</th>
                 <th>
-                <select name ="cod_masc"> 
+                <select id="petList" name ="cod_masc"> 
                       <option value="">Seleccione nombre mascota</option>
-                       <?php
-                        //Codigo php ciclo
-                        do{
-                       ?>
-                    <option value="<?php echo ($fila_masc['cod_masc']) ?>"><?php echo ($fila_masc['nom_masc']) ?></option>
-                        <?php   } while ($fila_masc = mysqli_fetch_assoc($query_masc));
-                    ?>
                 </select>
                 </th>
             </tr>
@@ -216,3 +209,28 @@ if(isset($_POST['btncerrar']))
        
     </body>
 </html> 
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script>
+   
+
+    $("#owerList").on("change", function (event) { 
+        $('#petList').hide()
+
+        $.get(`https://localhost/mascota_feliz/mascota/model/admin/mascotas_por_propietario.php?id=${event.target.value}`, (data, success) => {
+            const response = JSON.parse(data);
+            let options = `
+                <option value="">Seleccione nombre mascota</option>
+                ${response.map(arreglo => {
+                    return `<option value="${arreglo[0]}" > ${arreglo[1]} </option>`
+                }).join(' ')}
+            `;
+            $('#petList').html(options);
+            $('#petList').show()
+
+        });
+
+    });
+
+</script>

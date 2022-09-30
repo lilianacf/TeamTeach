@@ -20,7 +20,7 @@ $usua = mysqli_fetch_assoc($usuarios);
     
     
         <input type="submit" value="Cerrar sesión" name="btncerrar" /></td>
-        <input type="submit" formaction="../index.php" value="Regresar" />
+        <input type="submit" formaction="../propietario/index.php" value="Regresar" />
     </tr>
 </form>
 
@@ -62,7 +62,7 @@ if(isset($_POST['btncerrar']))
             <ul class="menu wrapper" >
     
                 <li class="first-item">
-                    <a href="#">
+                    <a href="cons_masc.php">
                         <img src="img/list.png" alt="" class="imagen">
                         <span class="text-item">Consultar Mascotas</span>
                         <span class="down-item"></span>
@@ -70,7 +70,7 @@ if(isset($_POST['btncerrar']))
                 </li>
     
                 <li>
-                    <a href="#">
+                    <a href="cons_hist_clini.php">
                         <img src="img/conhist.png" alt="" class="imagen">
                         <span class="text-item">Consultar Historia Clínica</span>
                         <span class="down-item"></span>

@@ -97,7 +97,7 @@ if(isset($_POST['btncerrar']))
                 </li>
     
                 <li>
-                    <a href="hist_clinica.php">
+                    <a href="visita.php">
                         <img src="img/his.png" alt="" class="imagen">
                         <span class="text-item">Agregar Historia Clínica</span>
                         <span class="down-item"></span>
@@ -139,7 +139,7 @@ if(isset($_POST['btncerrar']))
                 </li>
 
                 <li>
-                    <a href="cons_hclinica.php">
+                    <a href="lista_visitas.php">
                         <img src="img/conhist.png" alt="" class="imagen">
                         <span class="text-item">Consultar Historia Clinica</span>
                         <span class="down-item"></span>
